@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab5</title>
+</head>
+<body>
+    <h1>Чат с LLM</h1>
+    <div class="chat-container" id="chatContainer">
+        <!-- Сообщения будут здесь -->
+    </div>
+
+    <div class="controls">
+        <label for="tempSlider">Температура (0.0-1.0):</label>
+        <input type="range" id="tempSlider" min="0.0" max="1.0" step="0.1" value="0.7">
+        <span id="tempValueDisplay">0.7</span><br>
+
+        <label for="maxLengthInput">Макс. длина ответа (токены):</label>
+        <input type="number" id="maxLengthInput" value="200" min="1">
+    </div>
+    
+    <textarea id="questionInput" placeholder="Введите ваш вопрос..." rows="3" cols="50"></textarea><br>
+    <button onclick="sendQuestion()">Отправить</button>
+    <script src="script.js"></script>
+</body>
+</html>
